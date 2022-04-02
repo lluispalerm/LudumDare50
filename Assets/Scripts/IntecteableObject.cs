@@ -10,7 +10,7 @@ public class IntecteableObject : MonoBehaviour
     public bool family;
 
     //public UnityEvent event;
-    public BoxCollider2D collider;
+    public BoxCollider2D boxCollider;
     public GameObject outline;
     public GameObject canvas;
     public PlayerController playerRef;
@@ -21,7 +21,7 @@ public class IntecteableObject : MonoBehaviour
     {
         outline.SetActive(false);
         canvas.SetActive(false);
-        collider = gameObject.GetComponent<BoxCollider2D>();
+        boxCollider = gameObject.GetComponent<BoxCollider2D>();
         playerRef = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
@@ -45,6 +45,7 @@ public class IntecteableObject : MonoBehaviour
     {
         outline.SetActive(false);
         canvas.SetActive(false);
+        playerRef.currentObject = null;
         Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
     }
 
