@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class IntecteableObject : MonoBehaviour
 {
-
-    public float timeToDo;
+    public int hoursToDo;
+    public int minutesToDo;
     public string taskName;
     public bool family;
-
+    public AudioClip sound;
     //public UnityEvent event;
     public BoxCollider2D boxCollider;
     public GameObject outline;
