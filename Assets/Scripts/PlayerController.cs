@@ -7,14 +7,15 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     public float speed;
     public float deadZone;
+    public Rigidbody2D rb;
 
-
-    private IntecteableObject currentObject;
+    public IntecteableObject currentObject;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        //controller = gameObject.GetComponent<CharacterController>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -31,13 +32,14 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Move(float hAxis){
-
+        //controller.Move((new Vector3(speed,0,0) * hAxis) * Time.deltaTime);
+        //rb.Move( * Time.deltaTime);
+        rb.MovePosition(rb.position + (new Vector2(speed,0) * hAxis) * Time.fixedDeltaTime);
     }
 
     public void Interact(){
         if(currentObject != null){
-            //IntecteableObject.action();
-
+            currentObject.Action();
         }
     }
 }
