@@ -9,9 +9,10 @@ public class IntecteableObject : MonoBehaviour
     public string taskName;
     public bool family;
 
-    public UnityEvent event;
+   /* public UnityEvent event;
     public BoxCollider2D collider;
     public GameObject outline;
+    public PlayerController playerRef;*/
 
 
     // Start is called before the first frame update
@@ -27,9 +28,17 @@ public class IntecteableObject : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D col)
+    /*void OnTriggerEnter2D(Collider2D col)
     {
+        //outline.setActiceTrue
         Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
     }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
+    }*/
+
+
 
 }

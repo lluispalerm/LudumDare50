@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     public void Interact(){
         if(currentObject != null){
-            IntecteableObject.action();
+            //IntecteableObject.action();
 
         }
     }
