@@ -18,13 +18,13 @@ public class BarraBehaviour : MonoBehaviour
     void Update()
     {
         //For demo
-        if (Input.GetKeyDown("q")){
+        /*if (Input.GetKeyDown("q")){
             UpdateBarraStatus(-0.05f);
         }
         if (Input.GetKeyDown("e")){
             Debug.Log(PercentageActual());
             UpdateBarraStatus(0.05f);
-        }
+        }*/
     }
 
     public void UpdateBarraStatus(float value = -0.05f){
