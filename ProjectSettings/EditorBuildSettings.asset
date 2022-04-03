@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/House.unity
     guid: 4bfda2d86f54d8a4a8415f102cecc93d
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: 8c28c65276b9cb541ab7865cb3aa6554
+    path: Assets/Scenes/Start.unity
+    guid: 0c6ecc80ad26e7f4b87a42c17f6defbc
   m_configObjects: {}
