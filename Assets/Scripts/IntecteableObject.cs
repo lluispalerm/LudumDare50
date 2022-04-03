@@ -8,6 +8,7 @@ public class IntecteableObject : MonoBehaviour
     public int minutesToDo;
     public string taskName;
     public bool family;
+    public FamilyBehaviour familyMember;
     public AudioClip sound;
     //public UnityEvent event;
     public BoxCollider2D boxCollider;
@@ -15,12 +16,15 @@ public class IntecteableObject : MonoBehaviour
     public GameObject canvas;
     public PlayerController playerRef;
 
+    public Controlador controller;
+
 
     // Start is called before the first frame update
     void Start()
     {
         outline.SetActive(false);
         canvas.SetActive(false);
+        controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
         playerRef = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
@@ -37,7 +41,7 @@ public class IntecteableObject : MonoBehaviour
         //outline.setActiceTrue
         if(col.gameObject.tag == "Player"){
             outline.SetActive(true);
-            canvas.SetActive(true);
+            //canvas.SetActive(true);
             playerRef.currentObject = this;
             Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
         }
@@ -47,14 +51,17 @@ public class IntecteableObject : MonoBehaviour
     {
         if(col.gameObject.tag == "Player"){
             outline.SetActive(false);
-            canvas.SetActive(false);
+            //canvas.SetActive(false);
             playerRef.currentObject = null;
             Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
         }
     }
 
     public void Action(){
-        Debug.Log("Toma interaccion");
+        if(!controller.interactin){
+             StartCoroutine(controller.DoAction(this));
+        }
+        
     }
 
 
