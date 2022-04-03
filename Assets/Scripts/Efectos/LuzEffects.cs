@@ -17,6 +17,11 @@ public class LuzEffects : MonoBehaviour
     public float varianteParpadeos = 0.2f;
     private int parpadeosActuales = 0;
     private bool estamosParpadeando = false;
+
+    [Header("Sonidos parpadeo")]
+    public AudioSource source;
+    public List<AudioClip> clipsOn = new List<AudioClip>();
+    public List<AudioClip> clipsOff = new List<AudioClip>();
     // Start is called before the first frame update
     void Start()
     {
@@ -37,11 +42,15 @@ public class LuzEffects : MonoBehaviour
             {
                 encendido.SetActive(false);
                 apagado.SetActive(true);
+                if (source)
+                    source.PlayOneShot(clipsOff[Random.Range(0, clipsOff.Count)]);
             }
             else
             {
                 encendido.SetActive(true);
                 apagado.SetActive(false);
+                if (source)
+                    source.PlayOneShot(clipsOn[Random.Range(0, clipsOn.Count)]);
             }
             if (!estamosParpadeando)
             {
