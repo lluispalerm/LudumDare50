@@ -5,6 +5,7 @@ using UnityEngine;
 public class FamilyBehaviour : MonoBehaviour
 {
     public float willToLive = 1.0f;
+    public GameObject[] events;
 
     
 
