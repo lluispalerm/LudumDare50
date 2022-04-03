@@ -53,4 +53,8 @@ public class BackgroundEffects : MonoBehaviour
         }
         return tiempo;
     }
+    private void OnEnable()
+    {
+        Start();    
+    }
 }

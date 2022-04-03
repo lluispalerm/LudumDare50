@@ -30,7 +30,7 @@ public class LuzEffects : MonoBehaviour
 
     private IEnumerator LanzarLuz(float tiempo)
     {
-        Debug.Log("Siguiente parpadeo será lanzado en " + tiempo);
+        //Debug.Log("Siguiente parpadeo será lanzado en " + tiempo);
         if (tiempo is 50.0f)
         {
             yield return new WaitForSeconds(5.0f);
@@ -104,5 +104,9 @@ public class LuzEffects : MonoBehaviour
                 break;
         }
         return tiempo;
+    }
+    private void OnEnable()
+    {
+        Start();    
     }
 }
