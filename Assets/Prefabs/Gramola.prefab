@@ -292,7 +292,7 @@ Transform:
   m_GameObject: {fileID: 1622307677330913297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.14, y: -1.92, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1.7919}
+  m_LocalScale: {x: 1, y: 1, z: 1.7919}
   m_Children:
   - {fileID: 1622307678016517491}
   - {fileID: 1622307676680711798}
@@ -365,9 +365,9 @@ MonoBehaviour:
   hoursToDo: 2
   minutesToDo: 0
   taskName: 
-  family: 0
+  family: 1
   familyMember: {fileID: 0}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 35016c57ea26b934f99e3a41d5ee1924, type: 3}
   boxCollider: {fileID: 0}
   outline: {fileID: 1622307678016517489}
   canvas: {fileID: 1622307676680711794}

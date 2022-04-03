@@ -102,7 +102,8 @@ MonoBehaviour:
   minutesToDo: 0
   taskName: 
   family: 0
-  sound: {fileID: 0}
+  familyMember: {fileID: 0}
+  sound: {fileID: 8300000, guid: 5f5688030d1c7ad409643cf7233680d1, type: 3}
   boxCollider: {fileID: 0}
   outline: {fileID: 7795202390395969423}
   canvas: {fileID: 7795202390290032263}
