@@ -18,7 +18,10 @@ public class Controlador : MonoBehaviour
     public bool interactin = false;
     public GameObject canvasDay; 
     public GameObject[] canvasBar;
+
+    //Gestion days
     private bool dayEnded;
+    private int day;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,7 @@ public class Controlador : MonoBehaviour
         if(canvasDay)
             canvasDay.SetActive(false);
         StartCoroutine(StartTransition());
+        day = 1;
     }
     
     
@@ -113,6 +117,23 @@ public class Controlador : MonoBehaviour
             canvasDay.SetActive(true);
         yield return null;
 
+        for(int i = 0; i < 4; i++){
+            BarraBehaviour bh = canvasBar[i].GetComponent<BarraBehaviour>();
+            float value = 0.0f;
+            if(i != 0){
+                Image imgPerfil = canvasBar[i].GetComponent<Image>();
+                imgPerfil.sprite = family[i - 1].sprite;
+                value =  family[i - 1].willToLive -  Mathf.Log(day);
+            }
+            else{
+
+            }
+
+            bh.UpdateBarraStatus();
+
+        }
+
+        day++;
         interactin = true;
         timer.isTransitioning = true;
     }
