@@ -21,13 +21,15 @@ public class Controlador : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
-        timer.Reset();
+        if(timer)
+            timer.Reset();
         StartCoroutine(StartTransition());
     }
     
     private IEnumerator StartTransition()
     {
-        timer.isTransitioning = true;
+        if(timer)
+            timer.isTransitioning = true;
         float alpha = 1.0f;
         while (transitionImage.color.a > 0.0f)
         {
@@ -36,12 +38,14 @@ public class Controlador : MonoBehaviour
             transitionImage.color = color;
             yield return null;
         }
-        timer.isTransitioning = false;
+        if(timer)
+            timer.isTransitioning = false;
         yield return null;
     }
     private IEnumerator EndTransition()
     {
-        timer.isTransitioning = true;
+        if(timer)
+            timer.isTransitioning = true;
         float alpha = 0.0f;
         while (transitionImage.color.a < 1.0f)
         {
@@ -50,14 +54,16 @@ public class Controlador : MonoBehaviour
             transitionImage.color = color;
             yield return null;
         }
-        timer.isTransitioning = false;
+        if(timer)
+            timer.isTransitioning = false;
         yield return null;
     }
     public IEnumerator DoAction(IntecteableObject obj)
     {
         interactin = true;
         yield return StartCoroutine(EndTransition());
-        timer.isTransitioning = true;
+        if(timer)
+            timer.isTransitioning = true;
         timer.ApplyTimeLoss(obj.hoursToDo, obj.minutesToDo);
         if(obj.sound != null){
             source.clip = obj.sound;
