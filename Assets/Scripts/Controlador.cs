@@ -25,7 +25,8 @@ public class Controlador : MonoBehaviour
         Application.targetFrameRate = 60;
         if(timer)
             timer.Reset();
-        canvasDay.SetActive(false);
+        if(canvasDay)
+            canvasDay.SetActive(false);
         StartCoroutine(StartTransition());
     }
     
@@ -100,8 +101,10 @@ public class Controlador : MonoBehaviour
 
     }
 
-    private IEnumerator transiotionToNextDay(){
-        canvasDay.SetActive(true);
+    private IEnumerator transiotionToNextDay()
+    {
+        if (canvasDay)
+            canvasDay.SetActive(true);
         yield return null;
 
         interactin = true;

@@ -43,23 +43,27 @@ public class MenuPrincipal : MonoBehaviour
     private IEnumerator Interact()
     {
         yield return controlador.StartCoroutine("EndTransition");
-        switch (botonActivo)
+        if (SceneManager.GetActiveScene().name == "Start")
         {
-            case 0:
-                SceneManager.LoadScene("House");
-                break;
-            case 1:
-                SceneManager.LoadScene("Credits");
-                break;
-            case 2:
-                break;
+            switch (botonActivo)
+            {
+                case 0:
+                    SceneManager.LoadScene("House");
+                    break;
+                case 1:
+                    SceneManager.LoadScene("Credits");
+                    break;
+                case 2:
+                    break;
+            }
         }
+        else SceneManager.LoadScene("Start");
     }
 
     private void SwitchCurrentOption()
     {
         int i = -1;
-        foreach(GameObject t in botones)
+        foreach (GameObject t in botones)
         {
             i++;
             if (i == botonActivo)
