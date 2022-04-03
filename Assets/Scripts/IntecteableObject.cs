@@ -64,7 +64,6 @@ public class IntecteableObject : MonoBehaviour
         if(!controller.interactin){
             StartCoroutine(controller.DoAction(this));
         }
-        
     }
 
 
