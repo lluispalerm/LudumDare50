@@ -40,9 +40,12 @@ public class IntecteableObject : MonoBehaviour
     {
         //outline.setActiceTrue
         if(col.gameObject.tag == "Player"){
-            outline.SetActive(true);
             //canvas.SetActive(true);
-            playerRef.currentObject = this;
+            if(controller.HasTime(this) || family){
+                outline.SetActive(true);
+                playerRef.currentObject = this;
+            }
+            
             Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
         }
     }
@@ -52,14 +55,14 @@ public class IntecteableObject : MonoBehaviour
         if(col.gameObject.tag == "Player"){
             outline.SetActive(false);
             //canvas.SetActive(false);
-            playerRef.currentObject = null;
+            if(playerRef.currentObject == this) playerRef.currentObject = null;
             Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
         }
     }
 
     public void Action(){
         if(!controller.interactin){
-             StartCoroutine(controller.DoAction(this));
+            StartCoroutine(controller.DoAction(this));
         }
         
     }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5db650a380c8cd24090d9bf0daf0f08a
+guid: 3d090caab47a8f145807e6416f68bfca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6345686045927420774
-    second: comedor_mesa_0
+      213: 3571773333474955176
+    second: habitacion_oso_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: comedor_mesa_0
+      name: habitacion_oso_0
       rect:
         serializedVersion: 2
-        x: 74
-        y: 1
-        width: 108
-        height: 92
+        x: 60
+        y: 50
+        width: 39
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9cc75089289fe7a0800000000000000
-      internalID: -6345686045927420774
+      spriteID: 8afccf73cec719130800000000000000
+      internalID: 3571773333474955176
       vertices: []
       indices: 
       edges: []
