@@ -125,7 +125,8 @@ public class Controlador : MonoBehaviour
                 imgPerfil.sprite = family[i - 1].sprite;
                 value =  family[i - 1].willToLive -  Mathf.Log(day);
             }
-            else{
+            else
+            {
 
             }
 

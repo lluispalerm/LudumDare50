@@ -43,14 +43,20 @@ public class LuzEffects : MonoBehaviour
                 encendido.SetActive(false);
                 apagado.SetActive(true);
                 if (source)
-                    source.PlayOneShot(clipsOff[Random.Range(0, clipsOff.Count)]);
+                {
+                    source.clip = clipsOff[Random.Range(0, clipsOff.Count)];
+                    source.Play();
+                }
             }
             else
             {
                 encendido.SetActive(true);
                 apagado.SetActive(false);
                 if (source)
-                    source.PlayOneShot(clipsOn[Random.Range(0, clipsOn.Count)]);
+                {
+                    source.clip = clipsOn[Random.Range(0, clipsOn.Count)];
+                    source.Play();
+                }
             }
             if (!estamosParpadeando)
             {
