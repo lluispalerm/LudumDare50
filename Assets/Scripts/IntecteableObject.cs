@@ -35,18 +35,22 @@ public class IntecteableObject : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         //outline.setActiceTrue
-        outline.SetActive(true);
-        canvas.SetActive(true);
-        playerRef.currentObject = this;
-        Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
+        if(col.gameObject.tag == "Player"){
+            outline.SetActive(true);
+            canvas.SetActive(true);
+            playerRef.currentObject = this;
+            Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
+        }
     }
 
     void OnTriggerExit2D(Collider2D col)
     {
-        outline.SetActive(false);
-        canvas.SetActive(false);
-        playerRef.currentObject = null;
-        Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
+        if(col.gameObject.tag == "Player"){
+            outline.SetActive(false);
+            canvas.SetActive(false);
+            playerRef.currentObject = null;
+            Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
+        }
     }
 
     public void Action(){
