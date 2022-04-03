@@ -13,6 +13,10 @@ public class Controlador : MonoBehaviour
 
     public AudioSource source;
 
+    public FamilyBehaviour[] family;
+
+    public bool interactin = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,13 +55,18 @@ public class Controlador : MonoBehaviour
     }
     public IEnumerator DoAction(IntecteableObject obj)
     {
+        interactin = true;
         yield return StartCoroutine(EndTransition());
         timer.isTransitioning = true;
         timer.ApplyTimeLoss(obj.hoursToDo, obj.minutesToDo);
-        source.clip = obj.sound;
-        source.Play();
-        yield return new WaitForSeconds(obj.sound.length);
+        if(obj.sound != null){
+            source.clip = obj.sound;
+            source.Play();
+            yield return new WaitForSeconds(obj.sound.length);
+        }
+        
         yield return StartCoroutine(StartTransition());
+        interactin = false;
     }
 
 }

@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fondo
+    uniqueID: 2517833693
+    locked: 0
+  - name: Objetos
+    uniqueID: 1710138715
+    locked: 0
