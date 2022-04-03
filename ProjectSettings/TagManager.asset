@@ -47,3 +47,9 @@ TagManager:
   - name: Objetos
     uniqueID: 1710138715
     locked: 0
+  - name: Family
+    uniqueID: 162434829
+    locked: 0
+  - name: Player
+    uniqueID: 2934904875
+    locked: 0
