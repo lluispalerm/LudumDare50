@@ -16,11 +16,14 @@ public class Controlador : MonoBehaviour
     public FamilyBehaviour[] family;
 
     public bool interactin = false;
+    public GameObject canvasDay; 
+    public GameObject[] canvasBar;
 
     // Start is called before the first frame update
     void Start()
     {
         Application.targetFrameRate = 60;
+        canvasDay.SetActive(false);
         timer.Reset();
         StartCoroutine(StartTransition());
     }
@@ -39,6 +42,7 @@ public class Controlador : MonoBehaviour
         timer.isTransitioning = false;
         yield return null;
     }
+
     private IEnumerator EndTransition()
     {
         timer.isTransitioning = true;
@@ -53,6 +57,7 @@ public class Controlador : MonoBehaviour
         timer.isTransitioning = false;
         yield return null;
     }
+
     public IEnumerator DoAction(IntecteableObject obj)
     {
         interactin = true;
@@ -67,6 +72,34 @@ public class Controlador : MonoBehaviour
         
         yield return StartCoroutine(StartTransition());
         interactin = false;
+    }
+    
+    public bool HasTime(IntecteableObject obj){
+        if(timer.hours == obj.hoursToDo){
+            if(timer.minutes < obj.minutesToDo){
+                return false;
+            }
+        }
+        else if(timer.hours < obj.hoursToDo){
+            return false;
+        }
+
+        return true;
+    }
+
+    private void StartNewDay(){
+        interactin = true;
+        timer.isTransitioning = true;
+        StartCoroutine(transiotionToNextDay());
+
+    }
+
+    private IEnumerator transiotionToNextDay(){
+        canvasDay.SetActive(true);
+        yield return null;
+
+        interactin = true;
+        timer.isTransitioning = true;
     }
 
 }
