@@ -41,6 +41,8 @@ public class Timer : MonoBehaviour
         }
         currentTime = 0.0f;
         UpdateText();
+
+        if(hours < 0) GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().StartNewDay();
     }
 
     public void Reset()

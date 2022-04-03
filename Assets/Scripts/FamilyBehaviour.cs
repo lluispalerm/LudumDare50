@@ -30,6 +30,12 @@ public class FamilyBehaviour : MonoBehaviour
         willToLive -= dayPassedValue; 
     }
 
+    public void DisableEvents(){
+        foreach(GameObject gameObj in events){
+            gameObj.GetComponent<IntecteableObject>().enabled = false;
+        }
+    }
+
 
 
     

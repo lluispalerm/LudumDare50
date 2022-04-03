@@ -18,6 +18,7 @@ public class Controlador : MonoBehaviour
     public bool interactin = false;
     public GameObject canvasDay; 
     public GameObject[] canvasBar;
+    private bool dayEnded;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class Controlador : MonoBehaviour
         timer.Reset();
         StartCoroutine(StartTransition());
     }
+    
     
     private IEnumerator StartTransition()
     {
@@ -72,6 +74,10 @@ public class Controlador : MonoBehaviour
         
         yield return StartCoroutine(StartTransition());
         interactin = false;
+
+        if(timer.hours < 0f){
+            StartNewDay();
+        }
     }
     
     public bool HasTime(IntecteableObject obj){
@@ -87,7 +93,7 @@ public class Controlador : MonoBehaviour
         return true;
     }
 
-    private void StartNewDay(){
+    public void StartNewDay(){
         interactin = true;
         timer.isTransitioning = true;
         StartCoroutine(transiotionToNextDay());
