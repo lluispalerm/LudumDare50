@@ -42,11 +42,12 @@ public class IntecteableObject : MonoBehaviour
         //outline.setActiceTrue
         if(col.gameObject.tag == "Player"){
             //canvas.SetActive(true);
-            if(controller.HasTime(this) || family){
+            if(family ){
+                Debug.Log("CULPA DE ASI: ");
                 outline.SetActive(true);
                 playerRef.currentObject = this;
             }
-            else if(!family && !refuerzos.activeSelf){
+            else if(!family && refuerzos != null && !refuerzos.activeSelf && controller.HasTime(this)){
                 outline.SetActive(true);
                 playerRef.currentObject = this;
             }
@@ -73,6 +74,8 @@ public class IntecteableObject : MonoBehaviour
             if(!family && !refuerzos.activeSelf){
                 if(gameObject.name != "Puerta") gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 refuerzos.SetActive(true);
+                outline.SetActive(false);
+                if(playerRef.currentObject == this) playerRef.currentObject = null;
             }
         }
     }

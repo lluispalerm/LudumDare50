@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Controlador : MonoBehaviour
 {
@@ -25,7 +26,9 @@ public class Controlador : MonoBehaviour
     public GameObject[] canvasBar;
 
     public PlayerController player;
-    private float puertaLive = 0.8f;
+
+    public IntecteableObject[] defensas;
+    public float puertaLive = 0.8f;
 
     //Gestion days
     private bool dayEnded;
@@ -162,6 +165,7 @@ public class Controlador : MonoBehaviour
                             obj.SetActive(false);
                         }
                         family[i - 1].gameObject.SetActive(false);
+                        PlayerPrefs.SetInt("familia_"+i, 0);
                     }
                 }
             }
@@ -171,6 +175,7 @@ public class Controlador : MonoBehaviour
                 puertaLive = Mathf.Clamp(value, 0 , 1);
                 if(value <= 0){
                     //ACABAR 
+                    SceneManager.LoadScene("Muerte");
                 }
             }
 
@@ -187,6 +192,15 @@ public class Controlador : MonoBehaviour
         backgroundEffects.enabled = true;
         sourceCalle.enabled = true;
         sourceLuzPasillo.enabled = true;
+        
+        //Desmontar defensas
+        foreach(IntecteableObject intObj in defensas){
+            if(Random.Range(0, 2) == 0){
+                intObj.refuerzos.SetActive(false);
+                intObj.GetComponent<SpriteRenderer>().enabled = true;
+            }
+        }
+
         yield return null;
     }
 

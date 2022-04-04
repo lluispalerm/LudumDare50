@@ -14,6 +14,10 @@ public class MenuPrincipal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("familia_1", 1);
+        PlayerPrefs.SetInt("familia_2", 1);
+        PlayerPrefs.SetInt("familia_3", 1);
+        Application.targetFrameRate = 60;
         controlador.StartCoroutine("StartTransition");
     }
     private void Update()

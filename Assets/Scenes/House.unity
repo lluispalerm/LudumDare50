@@ -573,6 +573,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &200631593 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 315964665816526361, guid: 3d41c5e966d9c5f4e82dea33a987e380, type: 3}
+  m_PrefabInstance: {fileID: 8239763621192931031}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc422a37bba60a45b0919ff03efc23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &201363439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,7 +1136,7 @@ MonoBehaviour:
   hours: 14
   minutes: 0
   timeForFiveMins: 2
-  isTransitioning: 1
+  isTransitioning: 0
 --- !u!114 &515485020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,6 +1170,12 @@ MonoBehaviour:
   - {fileID: 978199033}
   - {fileID: 1481270586}
   player: {fileID: 767723248}
+  defensas:
+  - {fileID: 200631593}
+  - {fileID: 315964666764993823}
+  - {fileID: 315964667057861546}
+  - {fileID: 1153800748}
+  puertaLive: 0.8
 --- !u!114 &515485022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2484,6 +2501,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1153800748 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7118018643204468134, guid: fdb3aec092dda1148b0421b290ca089e, type: 3}
+  m_PrefabInstance: {fileID: 6108560744346162528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc422a37bba60a45b0919ff03efc23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1244172655
 GameObject:
   m_ObjectHideFlags: 0
@@ -4643,8 +4671,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc422a37bba60a45b0919ff03efc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoursToDo: 1
-  minutesToDo: 30
+  hoursToDo: 2
+  minutesToDo: 0
   taskName: 
   family: 0
   familyMember: {fileID: 0}
@@ -4667,8 +4695,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc422a37bba60a45b0919ff03efc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoursToDo: 1
-  minutesToDo: 30
+  hoursToDo: 2
+  minutesToDo: 0
   taskName: 
   family: 0
   familyMember: {fileID: 0}
@@ -5925,8 +5953,16 @@ PrefabInstance:
       value: Ventanda
       objectReference: {fileID: 0}
     - target: {fileID: 315964665816526361, guid: 3d41c5e966d9c5f4e82dea33a987e380, type: 3}
+      propertyPath: hoursToDo
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 315964665816526361, guid: 3d41c5e966d9c5f4e82dea33a987e380, type: 3}
       propertyPath: refuerzos
       value: 
       objectReference: {fileID: 1037093641}
+    - target: {fileID: 315964665816526361, guid: 3d41c5e966d9c5f4e82dea33a987e380, type: 3}
+      propertyPath: minutesToDo
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d41c5e966d9c5f4e82dea33a987e380, type: 3}
