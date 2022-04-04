@@ -9,6 +9,7 @@ public class FamiliaMuerta : MonoBehaviour
     public GameObject pareja;
     public GameObject abuelo;
     public GameObject ninia;
+    public Transform fondo;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class FamiliaMuerta : MonoBehaviour
     }
     void Update()
     {
-        Camera.main.orthographicSize -= 0.0005f;
+        fondo.localScale -= new Vector3(0.001f,0.001f,0.001f);
     }
 
     private IEnumerator MostrarMuertos()
