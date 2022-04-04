@@ -25,6 +25,7 @@ public class Controlador : MonoBehaviour
     public GameObject[] canvasBar;
 
     public PlayerController player;
+    private float puertaLive = 0.8f;
 
     //Gestion days
     private bool dayEnded;
@@ -87,6 +88,9 @@ public class Controlador : MonoBehaviour
         timer.ApplyTimeLoss(obj.hoursToDo, obj.minutesToDo);
         if(obj.family)
             obj.familyMember.AddWill(obj.hoursToDo, obj.minutesToDo);
+        else{
+            puertaLive += 0.1f;
+        }
         if(obj.sound != null){
             sourceInteraccion.clip = obj.sound;
             sourceInteraccion.Play();
@@ -149,16 +153,28 @@ public class Controlador : MonoBehaviour
             float value = 0.0f;
             if(i != 0)
             {
-                bh.icon.sprite = family[i - 1].sprite;
-                value =  family[i - 1].willToLive -  Mathf.Log(day) * 0.1f;
-                family[i - 1].willToLive  = value;
+                if(family[i - 1].gameObject.activeSelf){
+                    bh.icon.sprite = family[i - 1].sprite;
+                    value =  family[i - 1].willToLive -  Mathf.Log(day) * 0.2f;
+                    family[i - 1].willToLive  = value;
+                    if(value <= 0){
+                        foreach( GameObject obj in family[i - 1].events){
+                            obj.SetActive(false);
+                        }
+                        family[i - 1].gameObject.SetActive(false);
+                    }
+                }
             }
             else
             {
-
+                value = puertaLive - Mathf.Log(day) * 0.3f;
+                puertaLive = Mathf.Clamp(value, 0 , 1);
+                if(value <= 0){
+                    //ACABAR 
+                }
             }
 
-            bh.UpdateBarraStatus();
+            bh.UpdateBarraStatus(value);
         }
         yield return new WaitForSeconds(audioFinalDia.length);
         day++;

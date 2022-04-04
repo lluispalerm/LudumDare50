@@ -29,7 +29,7 @@ public class BarraBehaviour : MonoBehaviour
 
     public void UpdateBarraStatus(float value = -0.05f)
     {
-        actual += value;
+        actual = value;
         actual = Mathf.Clamp(actual, 0, 1);
         fillImage.value = actual;
     }

@@ -1124,7 +1124,7 @@ MonoBehaviour:
   timerText: {fileID: 1006668939}
   hours: 14
   minutes: 0
-  timeForFiveMins: 6
+  timeForFiveMins: 2
   isTransitioning: 1
 --- !u!114 &515485020
 MonoBehaviour:
@@ -1435,6 +1435,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &650136791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8586651884592592948, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
+  m_PrefabInstance: {fileID: 3117140601143281184}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &650215148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1622307677330913301, guid: 2b91f86a3eda7634ca24c6868f25dda4, type: 3}
@@ -5276,6 +5287,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 79918358253765573, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 650136791}
+    - target: {fileID: 79918358253765573, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
+      propertyPath: actual
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 484906040076792683, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5378,6 +5397,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5197341118932614788, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985552534441532864, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985552534441532864, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
+      propertyPath: m_WholeNumbers
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7868484635328131565, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
