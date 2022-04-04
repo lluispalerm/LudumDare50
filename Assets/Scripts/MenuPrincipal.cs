@@ -54,6 +54,10 @@ public class MenuPrincipal : MonoBehaviour
                     SceneManager.LoadScene("Credits");
                     break;
                 case 2:
+                    if (Application.platform == RuntimePlatform.WebGLPlayer)
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    else
+                        Application.Quit();
                     break;
             }
         }
