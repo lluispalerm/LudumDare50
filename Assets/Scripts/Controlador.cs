@@ -140,9 +140,9 @@ public class Controlador : MonoBehaviour
         {
             BarraBehaviour bh = canvasBar[i].GetComponent<BarraBehaviour>();
             float value = 0.0f;
-            if(i != 0){
-                Image imgPerfil = canvasBar[i].GetComponent<Image>();
-                imgPerfil.sprite = family[i - 1].sprite;
+            if(i != 0)
+            {
+                bh.icon.sprite = family[i - 1].sprite;
                 value =  family[i - 1].willToLive -  Mathf.Log(day) * 0.1f;
                 family[i - 1].willToLive  = value;
             }

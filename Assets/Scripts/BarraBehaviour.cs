@@ -8,12 +8,12 @@ public class BarraBehaviour : MonoBehaviour
     public float max = 1f;
 
     public float actual = 0.5f;
-    public Image fillImage;
+    public Slider fillImage;
+    public Image icon;
 
     void Start(){
-        fillImage.fillAmount = actual;
+        fillImage.value = actual;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -27,10 +27,11 @@ public class BarraBehaviour : MonoBehaviour
         }*/
     }
 
-    public void UpdateBarraStatus(float value = -0.05f){
+    public void UpdateBarraStatus(float value = -0.05f)
+    {
         actual += value;
         actual = Mathf.Clamp(actual, 0, 1);
-        fillImage.fillAmount = actual;
+        fillImage.value = actual;
     }
 
     public float PercentageActual() => actual * 100.0f;
