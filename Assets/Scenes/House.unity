@@ -4792,6 +4792,7 @@ MonoBehaviour:
   canvas: {fileID: 315964667377584414}
   playerRef: {fileID: 0}
   controller: {fileID: 0}
+  refuerzos: {fileID: 0}
 --- !u!114 &315964667057861546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4815,6 +4816,7 @@ MonoBehaviour:
   canvas: {fileID: 315964666042474411}
   playerRef: {fileID: 0}
   controller: {fileID: 0}
+  refuerzos: {fileID: 0}
 --- !u!1 &315964667057861547
 GameObject:
   m_ObjectHideFlags: 0
@@ -5343,6 +5345,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 2683322642463582157, guid: 29075e7196ceefd4592c2125067c3b2a, type: 3}
+      propertyPath: family
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683322642463582157, guid: 29075e7196ceefd4592c2125067c3b2a, type: 3}
+      propertyPath: familyMember
+      value: 
+      objectReference: {fileID: 3827137544981316597}
     - target: {fileID: 2683322642463582158, guid: 29075e7196ceefd4592c2125067c3b2a, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5546,6 +5556,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4493218751536061508, guid: a54243859b01cd84a83f4ba77c112418, type: 3}
+      propertyPath: family
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493218751536061508, guid: a54243859b01cd84a83f4ba77c112418, type: 3}
+      propertyPath: familyMember
+      value: 
+      objectReference: {fileID: 415641241}
     - target: {fileID: 4493218751536061509, guid: a54243859b01cd84a83f4ba77c112418, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5635,6 +5653,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1379689121}
     m_Modifications:
+    - target: {fileID: 7795202389140884102, guid: ebf982f26ef6f9e479d589f0e3ce6f66, type: 3}
+      propertyPath: family
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7795202389140884102, guid: ebf982f26ef6f9e479d589f0e3ce6f66, type: 3}
+      propertyPath: familyMember
+      value: 
+      objectReference: {fileID: 415641241}
     - target: {fileID: 7795202389140884103, guid: ebf982f26ef6f9e479d589f0e3ce6f66, type: 3}
       propertyPath: m_Name
       value: Oso
@@ -5760,6 +5786,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1379689121}
     m_Modifications:
+    - target: {fileID: 6108560744233570134, guid: fdb3aec092dda1148b0421b290ca089e, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108560744233570134, guid: fdb3aec092dda1148b0421b290ca089e, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108560744233570134, guid: fdb3aec092dda1148b0421b290ca089e, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7118018643204468135, guid: fdb3aec092dda1148b0421b290ca089e, type: 3}
       propertyPath: m_Name
       value: Puerta

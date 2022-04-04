@@ -17,6 +17,7 @@ public class IntecteableObject : MonoBehaviour
     public PlayerController playerRef;
 
     public Controlador controller;
+    public GameObject refuerzos;
 
 
     // Start is called before the first frame update
