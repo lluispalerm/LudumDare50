@@ -23,7 +23,7 @@ public class FamilyBehaviour : MonoBehaviour
     }
 
     public void AddWill(int hour, int min){
-        willToLive = willToLive + ( 0.1f * hour) + ( 0.01f * min);
+        willToLive = willToLive + ( 0.08f * hour) + ( 0.01f * min);
         willToLive = Mathf.Clamp(willToLive, 0f, 1f);
     }
 

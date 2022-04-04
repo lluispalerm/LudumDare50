@@ -21,7 +21,6 @@ public class FamiliaMuerta : MonoBehaviour
 
     private IEnumerator MostrarMuertos()
     {
-        yield return controlador.StartCoroutine("StartTransition");
         if (PlayerPrefs.GetInt("familia_1", 1) is 0)
         {
             pareja.SetActive(false);
@@ -34,6 +33,9 @@ public class FamiliaMuerta : MonoBehaviour
         {
             ninia.SetActive(false);
         }
+        
+        yield return controlador.StartCoroutine("StartTransition");
+
         yield return new WaitForSeconds(5.0f);
         yield return controlador.StartCoroutine("EndTransition");
         SceneManager.LoadScene("Start");

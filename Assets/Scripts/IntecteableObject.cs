@@ -47,7 +47,7 @@ public class IntecteableObject : MonoBehaviour
                 outline.SetActive(true);
                 playerRef.currentObject = this;
             }
-            else if(!family && refuerzos != null && !refuerzos.activeSelf && controller.HasTime(this)){
+            else if(!family && !refuerzos.activeSelf && controller.HasTime(this)){
                 outline.SetActive(true);
                 playerRef.currentObject = this;
             }

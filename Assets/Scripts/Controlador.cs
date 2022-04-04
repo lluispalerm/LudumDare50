@@ -201,7 +201,9 @@ public class Controlador : MonoBehaviour
             }
         }
 
+        timer.isTransitioning = false;
         yield return null;
+        timer.isTransitioning = false;
     }
 
 }
