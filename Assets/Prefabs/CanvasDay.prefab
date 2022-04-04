@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: 7272987940737027903}
   - component: {fileID: 8563184831985373567}
   - component: {fileID: 4198246280038541247}
-  - component: {fileID: 6557400217952532855}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -110,8 +109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -80, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -72.75, y: -7.25}
+  m_SizeDelta: {x: 114.5, y: 114.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8563184831985373567
 CanvasRenderer:
@@ -141,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d1382088f0eac1e489acdd2814f5b4b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -151,21 +150,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6557400217952532855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706809565335450693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1784f267a0c7fd4e9b4f2646f0d118a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  max: 1
-  actual: 0.5
-  fillImage: {fileID: 0}
 --- !u!1 &2213094759435234946
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +311,6 @@ GameObject:
   - component: {fileID: 3117140602345584233}
   - component: {fileID: 3117140602345584235}
   - component: {fileID: 3117140602345584234}
-  - component: {fileID: 3117140602345584236}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -392,21 +375,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3117140602345584236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3117140602345584232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1784f267a0c7fd4e9b4f2646f0d118a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  max: 1
-  actual: 0.5
-  fillImage: {fileID: 0}
 --- !u!1 &3309352676031747743
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +481,7 @@ MonoBehaviour:
   max: 1
   actual: 0.5
   fillImage: {fileID: 4860245164693274981}
+  icon: {fileID: 4050058010529749707}
 --- !u!1 &4791395174911937433
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +588,7 @@ MonoBehaviour:
   max: 1
   actual: 0.5
   fillImage: {fileID: 6985552534441532864}
+  icon: {fileID: 0}
 --- !u!1 &5130111055852338172
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +907,7 @@ MonoBehaviour:
   max: 1
   actual: 0.5
   fillImage: {fileID: 1005600676180895004}
+  icon: {fileID: 3117140602345584234}
 --- !u!1 &5611611432190687616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1311,7 @@ MonoBehaviour:
   max: 1
   actual: 0.5
   fillImage: {fileID: 19874630353540016}
+  icon: {fileID: 5586884981757525059}
 --- !u!1 &8312966113472683998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,7 +1323,6 @@ GameObject:
   - component: {fileID: 2535857699477188567}
   - component: {fileID: 9057176162379691324}
   - component: {fileID: 4050058010529749707}
-  - component: {fileID: 2050367695307552553}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1416,21 +1387,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2050367695307552553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8312966113472683998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1784f267a0c7fd4e9b4f2646f0d118a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  max: 1
-  actual: 0.5
-  fillImage: {fileID: 0}
 --- !u!1 &8594220765270758141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,7 +1623,6 @@ GameObject:
   - component: {fileID: 682630534034120479}
   - component: {fileID: 7547284465974215894}
   - component: {fileID: 5586884981757525059}
-  - component: {fileID: 5771791299857988218}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1732,18 +1687,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5771791299857988218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9160694644670026188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1784f267a0c7fd4e9b4f2646f0d118a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  max: 1
-  actual: 0.5
-  fillImage: {fileID: 0}

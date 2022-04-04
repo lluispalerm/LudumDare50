@@ -1149,15 +1149,15 @@ MonoBehaviour:
   audioFinalDia: {fileID: 8300000, guid: a5a20278bffc58046a9d79db14d753b1, type: 3}
   family:
   - {fileID: 1258295310}
-  - {fileID: 415641241}
   - {fileID: 3827137544981316597}
+  - {fileID: 415641241}
   interactin: 0
   canvasDay: {fileID: 7161538053370394784}
   canvasBar:
-  - {fileID: 0}
-  - {fileID: 1272361032}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1303707925}
+  - {fileID: 660632015}
+  - {fileID: 978199033}
+  - {fileID: 1481270586}
   player: {fileID: 767723248}
 --- !u!114 &515485022
 MonoBehaviour:
@@ -1473,6 +1473,11 @@ Transform:
   m_Father: {fileID: 162018889}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &660632015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5468674621254901513, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
+  m_PrefabInstance: {fileID: 3117140601143281184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &674192112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,6 +2014,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &978199033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8040783749807423441, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
+  m_PrefabInstance: {fileID: 3117140601143281184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1006668937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2644,11 +2654,6 @@ MonoBehaviour:
   events:
   - {fileID: 256275196}
   sprite: {fileID: 21300000, guid: 2baf59ee46674154cbfc65540fb5683d, type: 3}
---- !u!1 &1272361032 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3117140602345584232, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
-  m_PrefabInstance: {fileID: 3117140601143281184}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1297941845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,6 +2736,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1303707925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4791395174911937433, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
+  m_PrefabInstance: {fileID: 3117140601143281184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1342553880
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,6 +3075,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1481270586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3309352676031747743, guid: 1f14f75ed22d7a64da2710e41600776f, type: 3}
+  m_PrefabInstance: {fileID: 3117140601143281184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1511693610
 GameObject:
   m_ObjectHideFlags: 0
