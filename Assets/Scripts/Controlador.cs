@@ -24,6 +24,8 @@ public class Controlador : MonoBehaviour
     public GameObject canvasDay; 
     public GameObject[] canvasBar;
 
+    public PlayerController player;
+
     //Gestion days
     private bool dayEnded;
     private int day;
@@ -77,6 +79,7 @@ public class Controlador : MonoBehaviour
 
     public IEnumerator DoAction(IntecteableObject obj)
     {
+        yield return null;
         interactin = true;
         yield return StartCoroutine(EndTransition());
         if(timer)
@@ -96,6 +99,10 @@ public class Controlador : MonoBehaviour
         if(timer.hours < 0f){
             StartNewDay();
         }
+
+        player.canMove = true;
+
+
     }
     
     public bool HasTime(IntecteableObject obj){

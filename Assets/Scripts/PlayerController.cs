@@ -9,10 +9,11 @@ public class PlayerController : MonoBehaviour
     public float deadZone;
     public Rigidbody2D rb;
 
+    public bool canMove = true;
 
     //Ref
     public IntecteableObject currentObject;
-    public SpriteRenderer renderer;
+    public SpriteRenderer palerRenderer;
 
     //Movement
     public Sprite[] sprites;
@@ -27,37 +28,39 @@ public class PlayerController : MonoBehaviour
     {
         //controller = gameObject.GetComponent<CharacterController>();
         rb = gameObject.GetComponent<Rigidbody2D>();
-        renderer = gameObject.GetComponent<SpriteRenderer>();
+        palerRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space")){
-            Interact();
-        }
-
-        float hAxis = Input.GetAxis("Horizontal");
-        if (Mathf.Abs(hAxis) > 0.3f){
-            moving = true;
-            Move(hAxis);
-        }
-        else{
-            if(moving){ 
-                renderer.sprite = sprites[0];
-                mFrame = 1;
+        if(canMove){
+            if (Input.GetKeyDown("space")){
+                Interact();
             }
-            moving = false;
-        }
 
-        if(moving){
-            renderer.sprite = sprites[mFrame];
-            if(iterator >= limitIterator){
-                mFrame++;
-                if(mFrame >= sprites.Length) mFrame = 1;
-                iterator = -1;
+            float hAxis = Input.GetAxis("Horizontal");
+            if (Mathf.Abs(hAxis) > 0.3f){
+                moving = true;
+                Move(hAxis);
             }
-            iterator++;
+            else{
+                if(moving){ 
+                    palerRenderer.sprite = sprites[0];
+                    mFrame = 1;
+                }
+                moving = false;
+            }
+
+            if(moving){
+                palerRenderer.sprite = sprites[mFrame];
+                if(iterator >= limitIterator){
+                    mFrame++;
+                    if(mFrame >= sprites.Length) mFrame = 1;
+                    iterator = -1;
+                }
+                iterator++;
+            }
         }
 
         
@@ -66,8 +69,8 @@ public class PlayerController : MonoBehaviour
     public void Move(float hAxis){
         //controller.Move((new Vector3(speed,0,0) * hAxis) * Time.deltaTime);
         //rb.Move( * Time.deltaTime);
-        if(hAxis < 0) renderer.flipX = true;
-        else renderer.flipX = false;
+        if(hAxis < 0) palerRenderer.flipX = true;
+        else palerRenderer.flipX = false;
         rb.MovePosition(rb.position + (new Vector2(speed,0) * hAxis) * Time.fixedDeltaTime);
     }
 

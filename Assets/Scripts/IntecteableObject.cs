@@ -46,8 +46,11 @@ public class IntecteableObject : MonoBehaviour
                 outline.SetActive(true);
                 playerRef.currentObject = this;
             }
+            else if(!family && !refuerzos.activeSelf){
+                outline.SetActive(true);
+                playerRef.currentObject = this;
+            }
             
-            Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
         }
     }
 
@@ -57,14 +60,20 @@ public class IntecteableObject : MonoBehaviour
             outline.SetActive(false);
             //canvas.SetActive(false);
             if(playerRef.currentObject == this) playerRef.currentObject = null;
-            Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
         }
     }
 
     public void Action()
     {
         if(!controller.interactin){
+            playerRef.palerRenderer.sprite = playerRef.sprites[0];
+            playerRef.canMove = false;
+            
             StartCoroutine(controller.DoAction(this));
+            if(!family && !refuerzos.activeSelf){
+                if(gameObject.name != "Puerta") gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                refuerzos.SetActive(true);
+            }
         }
     }
 
