@@ -10,10 +10,12 @@ public class Controlador : MonoBehaviour
     [Header("Transitions")]
     public Image transitionImage;
     public float transitionVelocity = 0.05f;
+    [Header("Audio")]
     public BackgroundEffects backgroundEffects;
     public LuzEffects luzEffects;
     public AudioSource sourceCalle;
     public AudioSource sourceInteraccion;
+    public AudioSource sourceLuzPasillo;
     public AudioClip audioFinalDia;
 
     public FamilyBehaviour[] family;
@@ -121,15 +123,19 @@ public class Controlador : MonoBehaviour
         timer.isTransitioning = true;
         if (canvasDay)
             canvasDay.SetActive(true);
-        yield return null;
         backgroundEffects.enabled = false;
         luzEffects.enabled = false;
-        sourceInteraccion.clip = null;
         sourceInteraccion.Stop();
-        sourceCalle.clip = null;
+        sourceInteraccion.clip = null;
         sourceCalle.Stop();
+        sourceCalle.clip = null;
+        sourceCalle.enabled = false;
+        sourceLuzPasillo.Stop();
+        sourceLuzPasillo.clip = null;
+        sourceLuzPasillo.enabled = false;
+        yield return null;
         sourceInteraccion.clip = audioFinalDia;
-        sourceCalle.Play();
+        sourceInteraccion.Play();
         for(int i = 0; i < 4; i++)
         {
             BarraBehaviour bh = canvasBar[i].GetComponent<BarraBehaviour>();
@@ -156,6 +162,9 @@ public class Controlador : MonoBehaviour
         timer.Reset();
         luzEffects.enabled = true;
         backgroundEffects.enabled = true;
+        sourceCalle.enabled = true;
+        sourceLuzPasillo.enabled = true;
+        yield return null;
     }
 
 }

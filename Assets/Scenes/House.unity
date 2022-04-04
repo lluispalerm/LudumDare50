@@ -1270,6 +1270,7 @@ MonoBehaviour:
   luzEffects: {fileID: 428860455}
   sourceCalle: {fileID: 74552003}
   sourceInteraccion: {fileID: 1954462704}
+  sourceLuzPasillo: {fileID: 1057004664}
   audioFinalDia: {fileID: 8300000, guid: a5a20278bffc58046a9d79db14d753b1, type: 3}
   family:
   - {fileID: 1258295310}
